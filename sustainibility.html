@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>sustain</title>
+    <style>
+      .homenav{
+            background-color:white ;
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+            display: flex;
+            color: black;
+          }
+          .honav{
+            margin-left: 500px;
+            margin-top: 50px;
+            gap: 20px;
+           
+        }
+         .honav a{
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 25px;
+            transition: 0.3s ease;
+        }
+         .honav a.active {
+            color: white;
+            font-weight: bolder;
+            font-size: larger;
+            background-color: #4f6133;
+        }
+        .nbar{
+            text-decoration: none;
+            color: black;
+            padding: 20px;   
+             transition: transform 0.3s ease;   
+          
+        }
+        .nbar:hover{
+          color:white;
+          background-color:rgb(67, 112, 67) ;
+          border-radius: 50px;
+          transform: scale(1.8);
+          
+        }
+      .sustain {
+        margin-top: 35px;
+        margin-right: 200px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .img {
+        height: 600px;
+        width: 470px;
+        border: none;
+        border-radius: 10px;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      .wrap {
+        display: flex;
+        gap: 30px;
+        
+      }
+      .icon
+      {
+        border: none;
+        border-radius: 50px;
+        background-color: rgb(228, 228, 164);
+        margin-top: 20px;
+      }
+      .bottom
+      {
+        margin-top: 30px;
+        border-radius: 10px;
+        background-color:  rgb(24, 66, 24);
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      footer
+      {
+        margin-top: 10px;
+        background-color: rgb(24, 66, 24);
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .item
+      {
+         display: flex;
+         gap: 20px;
+      }
+    
+
+      @media (max-width: 600px) {
+
+    .homenav {
+        padding: 10px;
+    }
+
+    .honav {
+        margin-left: 0;
+        margin-top: 10px;
+        gap: 5px;
+    }
+
+    .nbar {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .sustain {
+        margin: 20px 15px;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+    }
+
+    .content {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .wrap {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .icon {
+        margin-top: 10px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .item {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+    </style>
+  </head>
+  <body>
+    <nav class="homenav">
+      <img src="./images/hlogo.png" height="100px" width="300px" />
+      <div class="honav">
+        <a class="nbar" href="home.html">Home</a>
+        <a class="nbar" href="about.html">About</a>
+        <a class="nbar" href="products.html">Products</a>
+        <a class="nbar" href="sustainibility.html">Sustainability</a>
+        <a class="nbar" href="journey.html">Journey</a>
+        <a class="nbar" href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <div class="sustain">
+      <img class="img" src="./images/sustain.png" />
+      <div class="content">
+        <div class="wrap">
+          <img class="icon" src="./images/save-tree.png" height="60px" width="60px"/>
+          <div class="text">
+            <h2 style="color: rgb(38, 82, 38)">Sustainable Materials</h2>
+            <p>
+              We use bamboo, organic cotton, glass, stainlesss steel and other
+              natural materials.
+            </p>
+          </div>
+        </div>
+        <div class="wrap">
+          <img class="icon" src="./images/delivery-box.png" height="60px" width="60px" />
+          <div class="text">
+            <h2 style="color: rgb(38, 82, 38)">Plastic Free Packaging</h2>
+            <p>Our Packaging is 100% recyclable and Plastic free</p>
+          </div>
+        </div>
+        <div class="wrap">
+          <img class="icon" src="./images/equality.png" height="60px" width="60px" />
+          <div class="text">
+            <h2 style="color: rgb(38, 82, 38)">Ethical Production</h2>
+            <p>
+              We work with safe-trade partners and ensure safe working
+              conditions.
+            </p>
+          </div>
+        </div>
+        <div class="wrap">
+          <img  class="icon" src="./images/save-the-world.png" height="60px" width="60px" />
+          <div class="text">
+            <h2 style="color: rgb(38, 82, 38)">Our Impact</h2>
+            <p>
+              Every purchase helps us plant more trees and reduce environmental
+              impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+        <div class="each-element">
+        <h1>50K+</h1>
+         <P>Products Sold</P>
+        </div>
+        <div class="each-element">
+        <h1>15 Tons</h1>
+         <P>Plastic Reduced</P>
+        </div>
+        <div class="each-element">
+        <h1>12K+</h1>
+         <P>Trees Planted</P>
+        </div>
+        <div class="each-element">
+        <h1>5+</h1>
+         <P>Communities Supported</P>
+        </div>
+    </div>
+    <footer>
+
+      <div class="footer-item">
+          <p>EARTH & HOME</p>
+          <p>Live Better, Choose Better</p>
+        </div>
+
+        <div class="footer-item">
+          <p>Help</p>
+          <p>Contact Us</p>
+          <p>FAQs</p>
+          <p>Shopping & Services</p>
+          <p>Privacy Policy</p>
+        </div>
+
+        <div class="footer-item">
+        <h3>Follow Us</h3>
+        <div class="item">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        </div>
+        </div>
+        
+    </footer>
+  </body>
+</html>

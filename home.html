@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=  , initial-scale=1.0">
+    <title>Prj Home</title>
+    <style>
+       
+         .homenav{
+            background-color:white ;
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+            display: flex;
+            color: black;
+            padding: 20px;   
+          }
+          .honav{
+            margin-left: 300px;
+            margin-top: 50px;
+            gap: 20px;
+            text-decoration: none;
+            color: black; 
+        }
+        .honav a{
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 25px;
+            transition: 0.3s ease;
+        }
+        .honav a:hover{
+            background-color: #677A46;
+            color:white;
+        }
+       .honav a.active {
+            color: white;
+            font-weight: bolder;
+            font-size: larger;
+            background-color: #4f6133;
+        }
+        .nbar{
+            text-decoration: none;
+            color: black;
+            padding: 20px;     
+        }
+        .hero{
+            position: relative;
+            width: 100%;
+            height: 550px;
+            overflow: hidden;
+        }
+        .hero-video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .hero-content{
+            position: absolute;
+            top: 45%;
+            left: 30%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+        .hero-content h1{
+            font-size: 55px;
+            color: solid black;
+            margin-bottom: 20px;
+        }
+        .hero-content p{
+            font-size: 18px;
+            color:solid black;
+            margin-bottom: 25px;
+
+        }
+        .hero-content button{
+               background-color: #677A46;
+                border: none;
+                border-radius: 12px;
+                padding: 10px 25px;
+                font-size: 15px;
+                cursor: pointer;
+                transition: 0.3s ease;
+        }
+        .hero-content button:active{
+        transform: scale(0.95);
+        background-color: #4f6133;
+       }
+        .secnav{
+            overflow: hidden;
+        }
+        .nav1{
+            width: 100%;
+            background-color: #ECECE2;
+            padding: 20px;
+            display: flex;
+            justify-content:space-around;
+            gap: 40px;  
+            align-items:left;
+            height: 55px;
+            margin-right: 10px;   
+        }
+         .nbar1{
+            text-decoration: none;
+            color: black; 
+            font-size: 18px;
+        }
+        .navicon{
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .heading{
+            margin-left: 550px;
+        }
+        .line{
+            height:80px ;
+            width: 230px;
+            margin-top:-50px ;
+            margin-left:530px ;    
+        }
+        .container{
+            width: 100%;
+            padding: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: start;
+            overflow: hidden;
+        }
+        .container>div{
+            width: 200px;
+            border: 1px solid #677A46;
+        }
+        .title{
+            font-size: 16px;
+            text-align: center;
+        }
+        .lastnav{
+            height: 80px;
+            width: 100%;
+            background-color: #ECECE2;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .text{
+
+            margin-left: 30px;
+        }
+        .head1{
+        
+            white-space: nowrap;
+        }
+        .pclass{
+              margin-top: -30px;
+              white-space: nowrap;
+
+        }
+        .form{
+            width: 350px;
+            display: flex;
+            align-items: center;
+            gap:10px;
+            margin-left: auto;
+            margin-right: 60px;
+            margin-top: -10px;
+            border-radius: 10px;
+        }
+        .form input{
+            width: 300px;
+            height: 35px;
+            padding: 0 12px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 15px;
+        }
+    
+        .btn2{
+            width: 150px;
+            height: 35px;
+            border: none;
+            background-color: #677A46;
+            padding:0px;
+            border-radius: 15px;         
+        }
+            .form {
+            width: 450px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 150px;
+            margin-right: 60px;
+        }
+        .form input[type="email"] {
+            width: 300px;
+            height: 35px;
+            padding: 0 12px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 15px;
+        }
+
+        #subscribe {
+            display: none;
+        }
+        .btn2 {
+            width: 200px;
+            height: 35px;
+            border: none;
+            background-color: #677A46;
+            border-radius: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .success-message {
+            display: none;
+            color: #677A46;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        #subscribe:checked ~ .success-message {
+            display: block;
+        }
+        body{
+            overflow-x: hidden;
+        }
+
+
+/* for mobile view */
+@media (max-width: 600px) {
+
+    .homenav {
+        padding: 10px;
+    }
+
+    .honav {
+        margin-top: 10px;
+        gap: 5px;
+    }
+
+    .honav a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .nbar {
+        padding: 10px;
+    }
+
+    .hero {
+        height: 350px;
+    }
+
+    .hero-content {
+        left: 5%;
+        right: 5%;
+        top: 50%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-content button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    .nav1 {
+        padding: 10px;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nbar1 {
+        font-size: 15px;
+    }
+
+    .navicon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .heading {
+        margin-left: 0;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .line {
+        width: 180px;
+        height: 60px;
+        margin-top: -30px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .container > div {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .lastnav {
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .head1,
+    .pclass {
+        white-space: normal;
+    }
+
+    .pclass {
+        margin-top: 0;
+    }
+
+    .form {
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0 0 0;
+        gap: 8px;
+    }
+
+    .form input[type="email"] {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .btn2 {
+        width: 180px;
+    }
+}
+    </style>
+</head>
+<body>
+     <nav class="homenav">
+        <img src="./images/hlogo.png" height="100px" width="300px">
+        <div class="honav">
+            <a class="nbar active" href="home.html">Home</a>
+            <a class="nbar" href="about.html">About</a>
+            <a class="nbar" href="products.html">Products</a>
+            <a class="nbar" href="sustainibility.html">Sustainability</a>
+            <a class="nbar" href="journey.html">Journey</a>
+            <a class="nbar" href="contact.html">Contact</a>
+        </div>
+        </nav>
+        <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+        <source src="./images/home vid.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+        <h1>Live Better.<br>Choose Better.</h1>
+        <p>Eco-friendly products for a sustainable<br> lifestyle and a greener tomorrow.</p>        </div>
+</section>
+<section class="secnav">
+<nav class="nav1">
+            <a class="nbar1" href="">
+            <img src="./images/green-energy.png" class="navicon"> Sustainable Materials </a>
+            <a class="nbar1" href="">
+                <img src="./images/eco-packaging.png" class="navicon" > Plastic Free Packaging</a>
+            <a class="nbar1" href="">
+                <img src="./images/Hand1.png" class="navicon">Ethically Made</a>
+            <a class="nbar1" href="">
+                <img src="./images/planet.png" class="navicon">Good For You & The Planet</a>           
+        </nav>
+        </section>
+        <h2 class="heading"> Featured Products</h2>
+         <img src="./images/underline.png" class="line">
+    <div class="container">
+        <div>
+            <img src="./images/brush.png" height="200px" width="200px" alt="">
+            <h3 class="title">Bamboo Toothbrush</h3>
+        </div>
+         <div>
+            <img src="./images/bottle.png" height="200px" width="200px" alt="">
+            <h3 class="title">Stainless Steel Bottle</h3>
+        </div>
+         <div>
+            <img src="./images/bag.png" height="200px" width="200px" alt="">
+            <h3 class="title">Organic Cotton Tote Bag</h3>
+        </div>
+         <div>
+            <img src="./images/candle.png" height="200px" width="200px" alt="">
+            <h3 class="title">Soy Candle</h3>
+        </div>
+         <div>
+            <img src="./images/soap.png" height="200px" width="200px" alt="">
+            <h3 class="title">Natural Soap Bar</h3>
+        </div>
+         <div>
+            <img src="./images/spons1.png" height="200px" width="200px" alt="">
+            <h3 class="title">Bamboo Cutlery Set</h3>
+        </div>
+    </div>
+    <br>
+    <nav class="lastnav">
+         <img src="./images/green-energy.png" class="navicon">
+         <div class="text1">
+        <h3 class="head1">Join Our Green Community</h3>
+        <br>
+        <p class="pclass">Subscribe to get updates on new products,offers and eco-tips</p>
+         </div>
+        <div class="form">
+
+        <input type="email" placeholder="Enter your email" required>
+        <input type="checkbox" id="subscribe">
+        <label for="subscribe" class="btn2">Subscribe</label>
+        <span class="success-message">
+            You have successfully subscribed! 🌱
+        </span>
+</div>
+    </nav>
+    
+</body>
+</html>

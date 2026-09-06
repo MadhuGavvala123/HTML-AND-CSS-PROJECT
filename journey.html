@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="journey.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+    .homenav{
+            background-color:white ;
+            position: sticky;
+            top: 0px;
+            z-index: 1000;
+            display: flex;
+            color: black;
+            
+          }
+          .honav{
+            margin-left: 200px;
+            margin-top: 50px;
+            gap: 20px; 
+        }
+         .honav a{
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 25px;
+            transition: 0.3s ease;
+        }
+         .honav a.active {
+            color: white;
+            font-weight: bolder;
+            font-size: larger;
+            background-color: #4f6133;
+        }
+        .nbar{
+            text-decoration: none;
+            color: black;
+            padding: 20px;   
+             transition: transform 0.3s ease;   
+          
+        }
+        .nbar:hover{
+          color:white;
+          background-color:rgb(67, 112, 67) ;
+          border-radius: 50px;
+          transform: scale(1.8);
+          
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <main>
+         <nav class="homenav">
+        <img src="./images/hlogo.png" height="100px" width="300px" >
+        <div class="honav">
+            <a class="nbar" href="home.html">Home</a>
+            <a class="nbar" href="about.html">About</a>
+            <a class="nbar" href="products.html">Products</a>
+            <a class="nbar" href="sustainibility.html">Sustainability</a>
+            <a class="nbar" href="journey.html">Journey</a>
+            <a class="nbar" href="contact.html">Contact</a>
+        </div>
+         </nav>
+        <section class="intro">
+            <h1>Our Journey</h1>
+            <p>A glimpse of our journey towards <br>a sustainable future.</p>
+        </section>  
+        <section class="gallery">
+            <div class="gallery-item"><img src="./images/forest.jpeg" alt="Forest"></div>
+            <div class="gallery-item"><img src="./images/craft.jpeg" alt="sustainable products"></div>
+            <div class="gallery-item"><img src="./images/boxes.jpeg" alt="Sustainable packaging"></div>
+            <div class="gallery-item"><img src="./images/products.jpeg" alt="Earth and Home products"></div>
+            <div class="gallery-item"><img src="./images/bag.jpeg" alt="Earth and Home reusable bag"></div>
+            <div class="gallery-item"><img src="./images/mountain.jpeg" alt="Journey through nature"></div>
+            <div class="gallery-item"><img src="./images/team.jpg" alt="Earth and Home team"></div>
+        </section>
+
+   
+    </main>
+</body>
+</html>
