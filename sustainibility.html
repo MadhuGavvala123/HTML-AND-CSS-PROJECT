@@ -15,7 +15,7 @@
             color: black;
           }
           .honav{
-            margin-left: 500px;
+            margin-left: 40%;
             margin-top: 50px;
             gap: 20px;
            
@@ -101,21 +101,24 @@
 
       @media (max-width: 600px) {
 
-    .homenav {
+     .homenav {
+        flex-direction: column;
+        align-items: center;
         padding: 10px;
     }
 
     .honav {
         margin-left: 0;
         margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 5px;
     }
 
-    .nbar {
+    .honav a {
         padding: 8px 10px;
-        font-size: 14px;
     }
-
     .sustain {
         margin: 20px 15px;
         flex-direction: column;
@@ -173,7 +176,7 @@
         <a class="nbar" href="index.html">Home</a>
         <a class="nbar" href="about.html">About</a>
         <a class="nbar" href="products.html">Products</a>
-        <a class="nbar" href="sustainibility.html">Sustainability</a>
+        <a class="nbar active" href="sustainibility.html">Sustainability</a>
         <a class="nbar" href="journey.html">Journey</a>
         <a class="nbar" href="contact.html">Contact</a>
       </div>

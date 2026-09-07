@@ -3,45 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=  , initial-scale=1.0">
-    <title>Prj Home</title>
+    <title>Earth and Home</title>
     <style>
-       
-         .homenav{
+           .homenav{
+            width: 100% ;
             background-color:white ;
             position: sticky;
             top: 0px;
             z-index: 1000;
             display: flex;
             color: black;
-            padding: 20px;   
           }
           .honav{
-            margin-left: 300px;
-            margin-top: 50px;
-            gap: 20px;
-            text-decoration: none;
             color: black; 
+            text-decoration: none;
+            margin-left: 40%;
+            margin-top: 50px;
+            gap: 20px;   
+            
         }
-        .honav a{
+         .honav a{
             text-decoration: none;
             padding: 10px 16px;
             border-radius: 25px;
             transition: 0.3s ease;
+            color: black; 
+            
         }
-        .honav a:hover{
-            background-color: #677A46;
-            color:white;
-        }
-       .honav a.active {
+         .honav a.active {
             color: white;
             font-weight: bolder;
-            font-size: larger;
             background-color: #4f6133;
         }
-        .nbar{
-            text-decoration: none;
-            color: black;
-            padding: 20px;     
+     .nbar
+     {
+      color: black;
+      text-decoration: none;
+     }
+        .nbar:hover{
+          color:white;
+          background-color:rgb(67, 112, 67) ;
+          border-radius: 50px;
+          transform: scale(1.8);
+          
         }
         .hero{
             position: relative;
@@ -66,12 +70,13 @@
             font-size: 55px;
             color: solid black;
             margin-bottom: 20px;
+            
         }
         .hero-content p{
             font-size: 18px;
             color:solid black;
             margin-bottom: 25px;
-
+            padding-bottom: 8px;
         }
         .hero-content button{
                background-color: #677A46;
@@ -113,17 +118,18 @@
             margin-right: 10px;
         }
         .heading{
-            margin-left: 550px;
+            margin-left: 45%;
         }
         .line{
             height:80px ;
             width: 230px;
             margin-top:-50px ;
-            margin-left:530px ;    
+            margin-left:44% ;    
         }
         .container{
             width: 100%;
             padding: 0px;
+            border: none;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -132,7 +138,6 @@
         }
         .container>div{
             width: 200px;
-            border: 1px solid #677A46;
         }
         .title{
             font-size: 16px;
@@ -238,22 +243,23 @@
 /* for mobile view */
 @media (max-width: 600px) {
 
-    .homenav {
+      .homenav {
+        flex-direction: column;
+        align-items: center;
         padding: 10px;
     }
 
     .honav {
+        margin-left: 0;
         margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 5px;
     }
 
     .honav a {
         padding: 8px 10px;
-        font-size: 14px;
-    }
-
-    .nbar {
-        padding: 10px;
     }
 
     .hero {
